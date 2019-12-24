@@ -1,0 +1,111 @@
+#########
+# Step 1
+Code affected: none
+Created this file.
+
+#########
+# Step 2
+Code affected: all .java files
+Reformatted using the Google Java style formatter.
+
+#########
+# Step 3
+Code affected: Fish.turnAround
+Flaw: unnecessary if, leading to duplicate code.
+Fix: replaced if statement with a single assignment statement.
+
+# Step 4
+Code affected: all .java files
+Flaw: typing was incorrect on some variables.
+Fix: Changed the method and variable typing between public private and package private.
+
+# Step 5
+Code affected: FishTankManager.move
+Flaw: not concise and difficult to understand code
+Fix: Changed the draw function with a try catch in case a future subclass is added without a draw
+method.
+
+# Step 6
+Code affected: FishTankManager.move
+Flaw: not concise and difficult to understand code
+Fix: Changed the update function with a try catch in case a future subclass is added without a draw
+method. Also changed variable names a and b to height and width for clarity.
+
+# Step 7
+Code affected: HungryFish.java Seaweed.wave
+Flaw: concise code
+Fix: extended fish to hungryfish and changed wave method name to move so that I could collapse
+one of the functions in fishtankmanager.
+
+# Step 8
+Code affected: all .java files
+Flaw: variable names
+Fix: changed many single letter variables to height and width or other names to better depict what
+they really represent.
+
+# Step 9
+Code affected: Bubble.move
+Flaw: make it easier to use
+Fix: Moved the code in FishTankManager so I can call Bubble.move for future use
+
+# Step 10
+Code affected: mostly FishTankManager and Creature
+Flaw: inefficient
+Fix: I made a Creature class that is abstract so I can call methods faster.
+Issue with just using the whole methods so only have abstract methods for now.
+Trying to make a new array system. This preliminary model works for now.
+
+# Step 11
+Code affected: Fish.java
+Flaw: fish off screen
+Fix: Used the screen resolution variables from FishTankView (copied and pasted since they are
+private) and set them as boundaries in move and setlocation.
+
+# Step 12
+Code affected: all .java files
+Flaw: coordinate system
+Fix: Started making an Arraylist for fishes, also tweeked some of the width and height variables.
+
+# Step 13
+Code affected: Bubble.java and FishTankManager
+Flaw: efficiency
+Fix: I changed the storing system to an ArrayList of creatures and removed bubbles that would float
+above the screen (y=0). I now need to fix an appearance bug with HungryFish.
+
+# Step 14
+Code affected: all .java files
+Flaw: unclear variables. Also found an error with Hungryfish text not appearing.
+Fix: changed them to vertical and horizontal because x and y axis are confusing.
+
+# Step 15
+Code affected: Creature Fish Bubble and Seaweed
+Flaw: Parent class can hold more information.
+Fix: unprivated some variables and set them in an overarching Creature parent class. Tried to fix
+the text in MEHUNGRY from going off the screen.
+
+# Step 16
+Code affected: all .java files
+Flaw: unclean code
+Fix: I removed unnecessary comments and added javadoc to methods and class missing them. Looked over
+the typing of each variable/method and changed them appropriately. Have not fixed the MEHUNGRY going
+off the screen yet. Also removed imports that are no longer needed.
+
+
+# Step 17
+Code affected: Fish.java
+Flaw: MEHUNGRY text went offscreen.
+Fix: I reformatted the boundary to fix the MEHUNGRY issue
+
+# Step 18
+I added Human.java which interacts with all other creatures (other than bubbles because let's be
+honest, they aren't creatures). He walks back and force randomly because, well, he's spongebob
+and there is a 10% chance he will eat anything he touches, including fish, hungryfish, and seaweed.
+I added the Javadocs for the class and fixed some of the docs for other classes as well. I also
+added a getLocation to the Creature class in order to check for where each creature is. I also made
+sure to check for the boundaries of the screen because the bottom has the buttons and the top has a
+banner so I made minor adjustments to the boundaries.
+
+# Step 19
+Code affected: Fish.java Human.java and FishTankManager
+Flaw: fish did not turn around upon touching the boundary
+Fix: I turned humans and fish around on touching the border
